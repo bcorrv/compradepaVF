@@ -1,0 +1,55 @@
+{
+  "version":"1.0.0",
+  "property":{"name":"Departamento Las Nieves","commune":"Vitacura","priceUF":17650,"usefulM2":210,"totalM2":219,"commonExpensesCLP":725000,"bedrooms":"3 + servicio","bathrooms":4,"parking":2},
+  "modules":[["resumen","Resumen"],["encaje","Encaje personal"],["valor","Valor y oferta"],["mercado","Mercado y liquidez"],["plano","Plano y minuta"],["evidencia","Evidencia"],["preguntas","Preguntas al corredor"],["finanzas","Financiamiento"]],
+  "comparables":[
+    {"name":"Sujeto E&V","price":17650,"useful":210,"note":"Remodelado, vista al golf, piso 11"},
+    {"name":"Las Nieves 210 m²","price":17500,"useful":210,"note":"Rebajado desde UF 18.900; validar duplicidad"},
+    {"name":"Las Nieves NE 242 m²","price":16500,"useful":242,"note":"Mayor superficie y orientación nororiente"},
+    {"name":"Golf / Kennedy 240 m²","price":16900,"useful":240,"note":"Vista a cancha de golf"},
+    {"name":"Navidad–Las Nieves 227 m²","price":14800,"useful":227,"note":"4D/4B; oportunidad publicada"},
+    {"name":"Remodelado 160 m²","price":13650,"useful":160,"note":"Kennedy lateral / Las Nieves"}
+  ],
+  "fitCriteria":[
+    {"id":"space","name":"Amplitud y distribución","weight":15,"score":85,"veto":false},
+    {"id":"location","name":"Micro-ubicación","weight":15,"score":88,"veto":false},
+    {"id":"monthly","name":"Costo mensual sostenible","weight":15,"score":55,"veto":true},
+    {"id":"building","name":"Salud técnica del edificio","weight":20,"score":45,"veto":true},
+    {"id":"legal","name":"Regularidad legal y superficies","weight":15,"score":45,"veto":true},
+    {"id":"resale","name":"Liquidez de reventa","weight":10,"score":65,"veto":false},
+    {"id":"storage","name":"Bodega y almacenamiento","weight":5,"score":35,"veto":false},
+    {"id":"comfort","name":"Confort térmico y acústico","weight":5,"score":60,"veto":false}
+  ],
+  "adjustments":[
+    {"id":"floor","name":"Piso alto","uf":350},{"id":"view","name":"Vista despejada","uf":650},{"id":"privacy","name":"Una unidad por piso","uf":300},{"id":"renovation","name":"Remodelación","uf":450},{"id":"orientation","name":"Orientación sur-oriente","uf":-180},{"id":"expenses","name":"Gastos comunes altos","uf":-420},{"id":"capex","name":"Incertidumbre CAPEX edificio","uf":-550},{"id":"storage","name":"Bodega no acreditada","uf":-180}
+  ],
+  "liquidity":[
+    {"name":"Profundidad de demanda del ticket","score":55},{"name":"Diferenciación por amplitud","score":82},{"name":"Costo fijo frente a sustitutos","score":42},{"name":"Facilidad de comparar y tasar","score":68},{"name":"Competencia de edificios nuevos","score":58},{"name":"Flexibilidad de la planta","score":72}
+  ],
+  "zones":[
+    {"id":"living","name":"Living comedor","x":80,"y":360,"w":500,"h":280},{"id":"kitchen","name":"Cocina y servicio","x":600,"y":390,"w":310,"h":250},{"id":"principal","name":"Dormitorio principal","x":70,"y":70,"w":300,"h":240},{"id":"bedrooms","name":"Dormitorios secundarios","x":590,"y":70,"w":320,"h":250},{"id":"hall","name":"Hall y circulación","x":390,"y":150,"w":170,"h":210}
+  ],
+  "evidence":[
+    {"dimension":"Precio","question":"¿Cuál es el precio efectivo de cierre de comparables?","value":"Sólo precios publicados","quality":"C","impact":"Alto","status":"Pendiente"},
+    {"dimension":"Superficie","question":"¿Los 210 m² útiles coinciden con planos y medición?","value":"Declaración del aviso","quality":"D","impact":"Crítico","status":"Solicitar"},
+    {"dimension":"Remodelación","question":"¿Qué instalaciones fueron renovadas y regularizadas?","value":"Sin respaldo","quality":"D","impact":"Crítico","status":"Solicitar"},
+    {"dimension":"Edificio","question":"¿Qué CAPEX está aprobado o previsto?","value":"Desconocido","quality":"D","impact":"Crítico","status":"Solicitar"},
+    {"dimension":"Copropiedad","question":"¿Cuál es el fondo de reserva y la morosidad?","value":"Desconocido","quality":"D","impact":"Alto","status":"Solicitar"},
+    {"dimension":"Vista","question":"¿Existen permisos o terrenos que puedan obstruirla?","value":"No acreditado","quality":"D","impact":"Alto","status":"Investigar"},
+    {"dimension":"Seguridad","question":"¿Cuál es el historial de incidentes del edificio?","value":"Tendencia comunal favorable","quality":"C","impact":"Medio","status":"Solicitar"},
+    {"dimension":"Bodega","question":"¿Existe y está inscrita?","value":"No informada","quality":"D","impact":"Medio","status":"Aclarar"}
+  ],
+  "questions":[
+    {"cat":"Transacción","q":"Para entender bien el contexto, ¿qué motivó la venta y qué plazo maneja el propietario?","why":"Revela urgencia y flexibilidad real."},
+    {"cat":"Precio","q":"¿Hace cuánto está publicada y qué cambios de precio ha tenido?","why":"Mide resistencia del mercado."},
+    {"cat":"Precio","q":"¿Cómo llegó el propietario a UF 17.650? ¿Cuenta con tasación o comparables cerrados?","why":"Separa expectativa de evidencia."},
+    {"cat":"Departamento","q":"¿En qué año se remodeló y cuál fue exactamente el alcance?","why":"Distingue renovación estética de actualización integral."},
+    {"cat":"Departamento","q":"¿Se renovaron electricidad, agua, calefacción y matrices interiores?","why":"Los elementos ocultos determinan el riesgo."},
+    {"cat":"Departamento","q":"¿Han existido filtraciones, humedad o reclamos del piso inferior?","why":"Terrazas y baños son focos críticos."},
+    {"cat":"Edificio","q":"¿Qué obras mayores se ejecutaron en los últimos diez años?","why":"Revela el ciclo de renovación."},
+    {"cat":"Edificio","q":"¿Qué obras están aprobadas, cotizadas o en conversación?","why":"Detecta cuotas extraordinarias futuras."},
+    {"cat":"Edificio","q":"¿Cuál es el saldo del fondo de reserva y el nivel de morosidad?","why":"Mide capacidad de absorber fallas."},
+    {"cat":"Legal","q":"¿Podemos recibir dominio vigente, gravámenes, CIP, recepción final y planos antes de ofertar?","why":"Evita ofertar sin información básica."},
+    {"cat":"Cierre","q":"¿Aceptaría el propietario una oferta sujeta a revisión legal, técnica y financiera?","why":"Convierte la diligencia en condición efectiva."}
+  ]
+}
