@@ -1,55 +1,88 @@
 {
-  "version":"1.0.0",
-  "property":{"name":"Departamento Las Nieves","commune":"Vitacura","priceUF":17650,"usefulM2":210,"totalM2":219,"commonExpensesCLP":725000,"bedrooms":"3 + servicio","bathrooms":4,"parking":2},
-  "modules":[["resumen","Resumen"],["encaje","Encaje personal"],["valor","Valor y oferta"],["mercado","Mercado y liquidez"],["plano","Plano y minuta"],["evidencia","Evidencia"],["preguntas","Preguntas al corredor"],["finanzas","Financiamiento"]],
-  "comparables":[
-    {"name":"Sujeto E&V","price":17650,"useful":210,"note":"Remodelado, vista al golf, piso 11"},
-    {"name":"Las Nieves 210 m²","price":17500,"useful":210,"note":"Rebajado desde UF 18.900; validar duplicidad"},
+  "version": "1.1.0",
+  "property": {
+    "name": "Departamento Las Nieves",
+    "commune": "Vitacura",
+    "priceUF": 17650,
+    "usefulM2Published": 210,
+    "totalM2Published": 219,
+    "usefulM2PlanEstimate": 187,
+    "usefulM2PlanRange": [182,192],
+    "constructionYear": "Por confirmar con recepción final/SII",
+    "commonExpensesCLP": 725000,
+    "bedrooms": "3 + servicio",
+    "bathrooms": 4,
+    "parking": 2,
+    "usefulM2": 210
+  },
+  "modules": [["resumen","Resumen"],["encaje","Encaje personal"],["valor","Valor y oferta"],["mercado","Mercado y liquidez"],["plano","Plano y minuta"],["evidencia","Evidencia"],["preguntas","Preguntas al corredor"],["finanzas","Financiamiento"]],
+  "comparables": [
+    {"name":"Sujeto E&V","price":17650,"useful":210,"note":"84,0 UF/m² usando superficie publicada; 94,4 UF/m² usando estimación del plano"},
+    {"name":"Las Nieves 210 m²","price":17500,"useful":210,"note":"Rebajado desde UF 18.900; validar duplicidad y superficie acreditada"},
     {"name":"Las Nieves NE 242 m²","price":16500,"useful":242,"note":"Mayor superficie y orientación nororiente"},
     {"name":"Golf / Kennedy 240 m²","price":16900,"useful":240,"note":"Vista a cancha de golf"},
     {"name":"Navidad–Las Nieves 227 m²","price":14800,"useful":227,"note":"4D/4B; oportunidad publicada"},
     {"name":"Remodelado 160 m²","price":13650,"useful":160,"note":"Kennedy lateral / Las Nieves"}
   ],
-  "fitCriteria":[
-    {"id":"space","name":"Amplitud y distribución","weight":15,"score":85,"veto":false},
+  "fitCriteria": [
+    {"id":"space","name":"Amplitud y distribución","weight":15,"score":78,"veto":false},
     {"id":"location","name":"Micro-ubicación","weight":15,"score":88,"veto":false},
     {"id":"monthly","name":"Costo mensual sostenible","weight":15,"score":55,"veto":true},
-    {"id":"building","name":"Salud técnica del edificio","weight":20,"score":45,"veto":true},
-    {"id":"legal","name":"Regularidad legal y superficies","weight":15,"score":45,"veto":true},
-    {"id":"resale","name":"Liquidez de reventa","weight":10,"score":65,"veto":false},
+    {"id":"building","name":"Salud técnica del edificio","weight":20,"score":40,"veto":true},
+    {"id":"legal","name":"Regularidad legal y superficies","weight":15,"score":35,"veto":true},
+    {"id":"resale","name":"Liquidez de reventa","weight":10,"score":60,"veto":false},
     {"id":"storage","name":"Bodega y almacenamiento","weight":5,"score":35,"veto":false},
-    {"id":"comfort","name":"Confort térmico y acústico","weight":5,"score":60,"veto":false}
+    {"id":"comfort","name":"Confort térmico y acústico","weight":5,"score":55,"veto":false}
   ],
-  "adjustments":[
-    {"id":"floor","name":"Piso alto","uf":350},{"id":"view","name":"Vista despejada","uf":650},{"id":"privacy","name":"Una unidad por piso","uf":300},{"id":"renovation","name":"Remodelación","uf":450},{"id":"orientation","name":"Orientación sur-oriente","uf":-180},{"id":"expenses","name":"Gastos comunes altos","uf":-420},{"id":"capex","name":"Incertidumbre CAPEX edificio","uf":-550},{"id":"storage","name":"Bodega no acreditada","uf":-180}
+  "adjustments": [
+    {"id":"floor","name":"Piso alto","uf":350},{"id":"view","name":"Vista despejada","uf":650},{"id":"privacy","name":"Una unidad por piso","uf":300},{"id":"renovation","name":"Remodelación acreditada","uf":250},{"id":"orientation","name":"Orientación sur-oriente","uf":-180},{"id":"expenses","name":"Gastos comunes altos","uf":-420},{"id":"capex","name":"Incertidumbre CAPEX edificio","uf":-550},{"id":"storage","name":"Bodega no acreditada","uf":-180},{"id":"surface","name":"Riesgo por diferencia de superficie","uf":-650}
   ],
-  "liquidity":[
-    {"name":"Profundidad de demanda del ticket","score":55},{"name":"Diferenciación por amplitud","score":82},{"name":"Costo fijo frente a sustitutos","score":42},{"name":"Facilidad de comparar y tasar","score":68},{"name":"Competencia de edificios nuevos","score":58},{"name":"Flexibilidad de la planta","score":72}
+  "liquidity": [
+    {"name":"Profundidad de demanda del ticket","score":55},{"name":"Diferenciación por amplitud","score":75},{"name":"Costo fijo frente a sustitutos","score":42},{"name":"Facilidad de comparar y tasar","score":52},{"name":"Competencia de edificios nuevos","score":58},{"name":"Flexibilidad de la planta","score":72}
   ],
-  "zones":[
-    {"id":"living","name":"Living comedor","x":80,"y":360,"w":500,"h":280},{"id":"kitchen","name":"Cocina y servicio","x":600,"y":390,"w":310,"h":250},{"id":"principal","name":"Dormitorio principal","x":70,"y":70,"w":300,"h":240},{"id":"bedrooms","name":"Dormitorios secundarios","x":590,"y":70,"w":320,"h":250},{"id":"hall","name":"Hall y circulación","x":390,"y":150,"w":170,"h":210}
+  "zones": [
+    {"id":"living","name":"Living comedor","x":250,"y":420,"w":390,"h":230},{"id":"kitchen","name":"Cocina y servicio","x":170,"y":100,"w":360,"h":300},{"id":"principal","name":"Dormitorio principal","x":640,"y":500,"w":280,"h":160},{"id":"bedrooms","name":"Dormitorios secundarios","x":590,"y":70,"w":330,"h":300},{"id":"hall","name":"Hall y circulación","x":390,"y":300,"w":250,"h":120}
   ],
-  "evidence":[
-    {"dimension":"Precio","question":"¿Cuál es el precio efectivo de cierre de comparables?","value":"Sólo precios publicados","quality":"C","impact":"Alto","status":"Pendiente"},
-    {"dimension":"Superficie","question":"¿Los 210 m² útiles coinciden con planos y medición?","value":"Declaración del aviso","quality":"D","impact":"Crítico","status":"Solicitar"},
-    {"dimension":"Remodelación","question":"¿Qué instalaciones fueron renovadas y regularizadas?","value":"Sin respaldo","quality":"D","impact":"Crítico","status":"Solicitar"},
-    {"dimension":"Edificio","question":"¿Qué CAPEX está aprobado o previsto?","value":"Desconocido","quality":"D","impact":"Crítico","status":"Solicitar"},
-    {"dimension":"Copropiedad","question":"¿Cuál es el fondo de reserva y la morosidad?","value":"Desconocido","quality":"D","impact":"Alto","status":"Solicitar"},
+  "evidence": [
+    {"dimension":"Antigüedad","question":"¿Cuál es el año de construcción y recepción final del edificio?","value":"No acreditado","quality":"D","impact":"Crítico","status":"Solicitar recepción final y ficha SII"},
+    {"dimension":"Superficie","question":"¿Los 210 m² útiles coinciden con plano aprobado y medición independiente?","value":"Plano métrico sugiere 187 m² útiles; rango 182–192 m²","quality":"C","impact":"Crítico","status":"Medir y acreditar"},
+    {"dimension":"Precio","question":"¿Cuál es el precio efectivo de cierre de comparables realmente equivalentes?","value":"Sólo precios publicados","quality":"C","impact":"Alto","status":"Pendiente"},
+    {"dimension":"Estructura","question":"¿Existen fisuras activas, asentamientos, reparaciones estructurales o informes de cálculo?","value":"Desconocido","quality":"D","impact":"Crítico","status":"Inspección especialista"},
+    {"dimension":"Humedad","question":"¿Hay filtraciones en terrazas, fachada, cubierta, baños o shafts?","value":"Desconocido","quality":"D","impact":"Crítico","status":"Inspección y actas"},
+    {"dimension":"Instalaciones","question":"¿Qué antigüedad tienen electricidad, agua, alcantarillado, calefacción y gas?","value":"Remodelación no acreditada","quality":"D","impact":"Crítico","status":"Solicitar respaldos"},
+    {"dimension":"Edificio","question":"¿Qué CAPEX está aprobado o previsto en ascensores, matrices, fachada e impermeabilización?","value":"Desconocido","quality":"D","impact":"Crítico","status":"Solicitar actas y presupuesto"},
+    {"dimension":"Copropiedad","question":"¿Cuál es el fondo de reserva, morosidad y siniestralidad?","value":"Desconocido","quality":"D","impact":"Alto","status":"Solicitar"},
+    {"dimension":"Confort","question":"¿Cómo se comporta térmica y acústicamente en invierno, verano y hora punta?","value":"No medido","quality":"D","impact":"Alto","status":"Visita técnica"},
     {"dimension":"Vista","question":"¿Existen permisos o terrenos que puedan obstruirla?","value":"No acreditado","quality":"D","impact":"Alto","status":"Investigar"},
-    {"dimension":"Seguridad","question":"¿Cuál es el historial de incidentes del edificio?","value":"Tendencia comunal favorable","quality":"C","impact":"Medio","status":"Solicitar"},
     {"dimension":"Bodega","question":"¿Existe y está inscrita?","value":"No informada","quality":"D","impact":"Medio","status":"Aclarar"}
   ],
-  "questions":[
-    {"cat":"Transacción","q":"Para entender bien el contexto, ¿qué motivó la venta y qué plazo maneja el propietario?","why":"Revela urgencia y flexibilidad real."},
-    {"cat":"Precio","q":"¿Hace cuánto está publicada y qué cambios de precio ha tenido?","why":"Mide resistencia del mercado."},
-    {"cat":"Precio","q":"¿Cómo llegó el propietario a UF 17.650? ¿Cuenta con tasación o comparables cerrados?","why":"Separa expectativa de evidencia."},
-    {"cat":"Departamento","q":"¿En qué año se remodeló y cuál fue exactamente el alcance?","why":"Distingue renovación estética de actualización integral."},
-    {"cat":"Departamento","q":"¿Se renovaron electricidad, agua, calefacción y matrices interiores?","why":"Los elementos ocultos determinan el riesgo."},
-    {"cat":"Departamento","q":"¿Han existido filtraciones, humedad o reclamos del piso inferior?","why":"Terrazas y baños son focos críticos."},
-    {"cat":"Edificio","q":"¿Qué obras mayores se ejecutaron en los últimos diez años?","why":"Revela el ciclo de renovación."},
-    {"cat":"Edificio","q":"¿Qué obras están aprobadas, cotizadas o en conversación?","why":"Detecta cuotas extraordinarias futuras."},
-    {"cat":"Edificio","q":"¿Cuál es el saldo del fondo de reserva y el nivel de morosidad?","why":"Mide capacidad de absorber fallas."},
-    {"cat":"Legal","q":"¿Podemos recibir dominio vigente, gravámenes, CIP, recepción final y planos antes de ofertar?","why":"Evita ofertar sin información básica."},
-    {"cat":"Cierre","q":"¿Aceptaría el propietario una oferta sujeta a revisión legal, técnica y financiera?","why":"Convierte la diligencia en condición efectiva."}
+  "questions": [
+    {"cat":"Identificación física","q":"¿Cuál es el año exacto de construcción, el año de recepción final y la fecha de cualquier ampliación o modificación posterior?","why":"Define antigüedad real, normativa aplicable y ciclo probable de reposición."},
+    {"cat":"Superficie","q":"¿Puede entregar el plano aprobado por DOM, cuadro de superficies y escritura donde consten m² útiles, terrazas, bodega y estacionamientos por separado?","why":"El levantamiento métrico sugiere una superficie útil menor a la publicada."},
+    {"cat":"Superficie","q":"¿Acepta que un arquitecto mida la superficie interior neta antes de formalizar la oferta?","why":"Una diferencia de 15–25 m² cambia materialmente el UF/m² y el valor."},
+    {"cat":"Estructura","q":"¿El edificio ha presentado fisuras, asentamientos, corrosión de armaduras, desprendimientos de fachada o reparaciones estructurales?","why":"Distingue desgaste superficial de riesgo estructural."},
+    {"cat":"Estructura","q":"¿Existen informes de ingeniería, inspecciones técnicas, ITE, peritajes o reclamos por daños sísmicos?","why":"Permite verificar la condición resistente y las reparaciones ejecutadas."},
+    {"cat":"Humedad","q":"¿Ha habido filtraciones desde terrazas, ventanas, fachada, cubierta, baños, cocina o departamentos superiores? ¿En qué fechas y cómo se repararon?","why":"La recurrencia y el origen importan más que una pintura reciente."},
+    {"cat":"Humedad","q":"¿Existen reclamos del piso inferior por filtraciones provenientes de esta unidad?","why":"Puede revelar fallas ocultas en impermeabilización y redes."},
+    {"cat":"Instalación eléctrica","q":"¿Se renovó completamente el tablero, cableado, protecciones diferenciales, puesta a tierra y capacidad de empalme? ¿Hay certificado SEC?","why":"Una remodelación estética puede conservar instalaciones antiguas e inseguras."},
+    {"cat":"Agua y alcantarillado","q":"¿De qué material y antigüedad son las cañerías interiores, montantes y descargas? ¿Se han producido roturas, baja presión u obstrucciones?","why":"Las matrices y descargas antiguas son una fuente relevante de CAPEX y daños."},
+    {"cat":"Calefacción","q":"¿Cómo funciona la losa radiante, qué sectores están operativos y cuándo se cambiaron válvulas, bombas, caldera y reguladores?","why":"La reparación puede ser invasiva y costosa."},
+    {"cat":"Gas","q":"¿La instalación de gas cuenta con sello vigente, pruebas de hermeticidad y ventilaciones reglamentarias?","why":"Es un punto de seguridad y regularidad."},
+    {"cat":"Ventanas y fachada","q":"¿Los termopaneles fueron instalados con autorización? ¿Presentan condensación interna, filtraciones de aire o sellos vencidos?","why":"Verifica desempeño real y eventual necesidad de reemplazo."},
+    {"cat":"Terrazas","q":"¿Cuándo se impermeabilizaron las terrazas y quién responde por las losas, sumideros y encuentros con fachada?","why":"Es uno de los riesgos físicos más frecuentes en departamentos grandes."},
+    {"cat":"Terminaciones","q":"¿Los pisos presentan desniveles, crujidos, piezas sueltas o humedad bajo revestimientos?","why":"Puede revelar asentamientos, filtraciones o mala ejecución de la remodelación."},
+    {"cat":"Baños y cocina","q":"¿Se renovaron impermeabilizaciones, desagües, sifones, llaves de paso y redes detrás de muebles y revestimientos?","why":"Lo no visible determina gran parte del riesgo de la remodelación."},
+    {"cat":"Remodelación","q":"¿En qué año se remodeló, quién diseñó y ejecutó, cuánto costó y qué facturas, planos, garantías y permisos existen?","why":"Permite valorar sólo las mejoras efectivamente acreditadas."},
+    {"cat":"Remodelación","q":"¿Se demolieron o modificaron muros, shafts, terrazas o recintos? ¿Existe aprobación municipal y de la copropiedad?","why":"Detecta alteraciones no regularizadas."},
+    {"cat":"Confort térmico","q":"¿Qué temperaturas alcanza el departamento en invierno y verano y cuál es el consumo mensual de calefacción?","why":"La orientación sur-oriente y el piso alto pueden afectar confort y gasto."},
+    {"cat":"Confort acústico","q":"¿Se perciben ruidos de Kennedy, ascensores, bombas, ductos, vecinos o servicios? ¿En qué horarios?","why":"El ruido es difícil y costoso de corregir después de comprar."},
+    {"cat":"Edificio","q":"¿Cuándo se reemplazaron o modernizaron ascensores, bombas, calderas, matrices, red de incendio, grupo electrógeno y portones?","why":"Construye el ciclo técnico real del edificio."},
+    {"cat":"Edificio","q":"¿Qué obras mayores están aprobadas, cotizadas o discutidas para los próximos cinco años?","why":"Anticipa cuotas extraordinarias y disrupción."},
+    {"cat":"Edificio","q":"¿Puede entregar las actas de asamblea y estados financieros de los últimos 24 meses?","why":"Permite detectar problemas repetitivos, litigios y gastos diferidos."},
+    {"cat":"Copropiedad","q":"¿Cuál es el fondo de reserva, morosidad, seguros, deducibles y siniestros de los últimos cinco años?","why":"Mide capacidad para enfrentar fallas sin cuotas extraordinarias."},
+    {"cat":"Precio","q":"¿Hace cuánto está publicada, qué cambios de precio ha tenido y qué ofertas formales se rechazaron?","why":"Mide resistencia real del mercado y poder negociador."},
+    {"cat":"Precio","q":"¿Cómo se justifican UF 17.650 considerando que el plano sugiere aproximadamente 187 m² útiles?","why":"Con 187 m² el precio efectivo sube a aproximadamente 94,4 UF/m²."},
+    {"cat":"Legal","q":"¿Puede entregar dominio vigente, gravámenes, recepción final, planos aprobados, reglamento y certificados antes de ofertar?","why":"Evita asumir regularidad sin respaldo."},
+    {"cat":"Cierre","q":"¿Aceptaría una oferta sujeta a revisión legal, medición de superficie e inspección técnica satisfactoria?","why":"Convierte las brechas detectadas en condiciones efectivas de compra."}
   ]
 }
